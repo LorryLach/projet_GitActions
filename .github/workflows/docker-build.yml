@@ -1,6 +1,7 @@
 name: Build et push sur Docker Hub
 
 on:
+  workflow_dispatch:  
   push:
     branches:
       - main
