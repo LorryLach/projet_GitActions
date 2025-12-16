@@ -5,10 +5,11 @@ metadata:
   labels:
     app: flask-app
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: flask-app
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 5000
+    - protocol: TCP
+      port: 80          # Port du service dans le cluster
+      targetPort: 5000  # Port exposé par Flask
+      nodePort: 30080   # Port exposé sur le noeud (entre 30000-32767)
