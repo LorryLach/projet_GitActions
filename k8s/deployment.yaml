@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: lorryl/flask-hello-world:05fb1acf06c555ab21eee573e4444eb8445e69d4
+        image: lorryl/flask-hello-world:1aa3a93d189cf8c01eb4912cea94e00c27e0e37c
         ports:
         - containerPort: 5000
         livenessProbe:
